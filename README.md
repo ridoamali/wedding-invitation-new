@@ -1,7 +1,7 @@
 # React + TypeScript + Vite
 
 Menggunakan PNPM
-Editing masih di sisi kanan atau di app.tsx lengkapi sectionnya dulu
+Editing masih di sisi kanan atau di app.tsx lengkapi sectionnya dulu dan perbaiki warna kombinasi
 Next perlu di tambahi animasi agar lebih smooth
 Tambahi koneksi ke SPreadsheet
 tambahi konek ke database
