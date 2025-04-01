@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif+Display:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Arapey:regular,italic);
+
+body {
+    font-family: 'Noto Serif Display', serif;
+  }
+  
+  h1 {
+    font-family: 'Arapey', serif;
+  }
