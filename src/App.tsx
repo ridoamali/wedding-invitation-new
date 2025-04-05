@@ -164,7 +164,7 @@ function App() {
 
             {/* Section Wedding Event */}
           <div className='relative'>
-          <div className='relative overflow-hidden h-screen aspect-[9/16]'>
+          <div className='overflow-hidden h-screen aspect-[9/16]'>
             <div className='absolute bg-cover bg-center inset-0 bg-[url(/assets/pexels-oneprophoto-photo-cinema-16098070.jpg)] '></div>
           </div>
           <div className='absolute -bottom-3/17 left-0 w-full h-full'>
