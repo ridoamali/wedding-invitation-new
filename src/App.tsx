@@ -11,6 +11,7 @@ const images = [
   {
     url: '/assets/pexels-oneprophoto-photo-cinema-16098066.jpg',
     alt: 'Image 1',
+    size: 'large',
   },
   {
     url: '/assets/pexels-oneprophoto-photo-cinema-16098077-scaled.jpg',
@@ -46,13 +47,13 @@ function App() {
           {/* Mobile/Tablet Header */}
           <div className='relative'>
           <ImageSlider />
-          <div className='absolute -bottom-3/4 left-0 w-full h-full'>
-            <div className='flex flex-col gap-2 text-center'>
-              <span className='text-xl text-white font-thin'>THE WEDDING OF</span>
-              <span className='text-4xl text-white font-thin'>ALISA & RIZKY</span>
+          <div className='absolute -bottom-3/4 left-0 w-full h-full transition duration-1000 ease-in'>
+            <div className='flex flex-col gap-y-[19px] text-center bg-linear-to-b from-orange-10/10 to-[#d8cfc9]/90'>
+              <span className='text-xl text-white font-thin parisienne-regular'>The Wedding of</span>
+              <span className='text-4xl text-white font-normal'>ALISA & RIZKY</span>
               <hr className='text-white w-1/2 mx-auto' />
-              <span className='text-white text-[10px] font-light text-center px-5'>And one of His signs is that He created mates for you from yourselves that you may find rest in them, and He put between you love and compassion; most surely there are signs in this for a people who reflect.</span>
-              <span className='text-white text-[10px] font-light text-center px-5'>- QS. AR-RUM 21 -</span>
+              <span className='text-white text-[12px] font-thin text-center px-5 font-[Arapey]'>And one of His signs is that He created mates for you from yourselves that you may find rest in them, and He put between you love and compassion; most surely there are signs in this for a people who reflect.</span>
+              <span className='text-white text-[12px] font-normal text-center px-5'>- QS. AR-RUM 21 -</span>
             </div>
           </div>
           </div>
@@ -96,16 +97,16 @@ function App() {
                 <div className='mt-8 text-center'>
                   {/* Text Overlay - Women */}
                   <div className='mb-6'>
-                    <p className='text-xl md:text-2xl text-black font-thin'>PUTRI</p>
-                    <p className='text-xl md:text-2xl text-black font-thin'>FULANAH</p>
-                    <p className='text-xl md:text-2xl text-black font-thin mt-2'>The Daughter of</p>
-                    <p className='text-xl md:text-2xl text-black font-thin'>Mr. Reynald Robert</p>
-                    <p className='text-xl md:text-2xl text-black font-thin'>& Mrs. Felia Lenita</p>
+                    <div className='text-3xl md:text-2xl text-black font-normal'>PUTRI</div>
+                    <div className='text-3xl md:text-2xl text-black font-normal'>FULANAH</div>
+                    <div className='text-sm md:text-2xl text-black font-thin italic my-2'>The Daughter of</div>
+                    <div className='text-md md:text-2xl text-black font-thin'>Mr. Reynald Robert</div>
+                    <div className='text-md md:text-2xl text-black font-thin'>& Mrs. Felia Lenita</div>
                   </div>
 
                   {/* AND Text */}
-                  <div className='mb-6'>
-                    <p className='text-xl md:text-2xl text-black font-thin'>AND</p>
+                  <div className='mb-6 my-20'>
+                    <span className='text-4xl md:text-2xl text-black font-thin parisienne-regular'>And</span>
                   </div>
                 </div>
 
@@ -134,26 +135,23 @@ function App() {
 
                 {/* Text Content */}
                 <div className='mt-8 text-center'>
-                  {/* Text Overlay - Women */}
+                  {/* Text Overlay - Men */}
                   <div className='mb-6'>
-                    <p className='text-xl md:text-2xl text-black font-thin'>PUTRA</p>
-                    <p className='text-xl md:text-2xl text-black font-thin'>FULAN</p>
-                    <p className='text-xl md:text-2xl text-black font-thin mt-2'>The Son of</p>
-                    <p className='text-xl md:text-2xl text-black font-thin'>Mr. Reynald Robert</p>
-                    <p className='text-xl md:text-2xl text-black font-thin'>& Mrs. Felia Lenita</p>
+                    <p className='text-3xl md:text-2xl text-black font-normal'>PUTRA</p>
+                    <p className='text-3xl md:text-2xl text-black font-normal'>FULAN</p>
+                    <p className='text-sm md:text-2xl text-black font-thin italic my-2'>The Son of</p>
+                    <p className='text-md md:text-2xl text-black font-thin'>Mr. Reynald Robert</p>
+                    <p className='text-md md:text-2xl text-black font-thin'>& Mrs. Felia Lenita</p>
                   </div>
 
-                  {/* AND Text */}
-                  <div className='mb-6'>
-                    <p className='text-xl md:text-2xl text-black font-thin'>AND</p>
-                  </div>
+
                 </div>
               </div>
             </div>
 
             {/* Section Our journey */}
-            <div className='p-4 flex flex-col items-center gap-y-4 bg-[#d8cfc6] '>
-              <div className='text-3xl font-bold'>Our Journey</div>
+            <div className='p-4 py-10 flex flex-col items-center gap-y-4 bg-[#d8cfc6] text-[#66574c] text-sm '>
+              <div className='text-3xl font-normal'>Our Journey</div>
                 <div className='flex justify-center items-center w-full h-full aspect-[16/9] max-w-lg inset-0 '>
                   <div className='bg-[url(/assets/pexels-oneprophoto-photo-cinema-16098072-768x442.jpg)] bg-contain bg-center bg-no-repeat w-full h-full rounded-3xl'></div>
                 </div>
@@ -163,23 +161,22 @@ function App() {
             </div>
 
             {/* Section Wedding Event */}
-          <div className='relative'>
-          <div className='overflow-hidden h-screen aspect-[9/16]'>
-            <div className='absolute bg-cover bg-center inset-0 bg-[url(/assets/pexels-oneprophoto-photo-cinema-16098070.jpg)] '></div>
+          <div className='relative min-h-screen w-full flex flex-col items-center justify-center py-10 md:py-10'>
+          <div className='overflow-hidden h-full'>
+            <div className='absolute bg-cover bg-center inset-0 bg-[url(/assets/pexels-oneprophoto-photo-cinema-16098070.jpg)] w-full h-full brightness-50 '></div>
           </div>
-          <div className='absolute -bottom-3/17 left-0 w-full h-full'>
-            <div className='flex flex-col gap-2 text-center items-center text-white'>
-              <span className='text-2xl font-thin'>WEDDING EVENT</span>
-              <span className='text-4xl font-thin'>Saturday, 06
+          <div className='relative text-center w-full h-full items-center p-5 '>
+            <div className='flex flex-col gap-2 text-center items-center text-white gap-y-10'>
+              <span className='text-4xl parisienne-regular'>Wedding Event</span>
+              <span className='text-2xl font-thin '>Saturday, 06
               May 2025</span>
-              <span className=' text-lg font-light text-center '>19.00 - 21.00 WIB</span>
+              <span className=' text-sm text-center '>19.00 - 21.00 WIB</span>
               <FaMapMarkedAlt className='text-2xl' />
-              <span className=' text-lg font-light text-center '>The Papandayan Hotel</span>
+              <span className=' text-lg text-center uppercase'>The Papandayan Hotel</span>
               <span className='text-lg font-thin'>Jl. Gatot Subroto No.83, Malabar, Kec. Lengkong, Kota Bandung, Jawa Barat 40262</span>
               <div className='inline-flex'>
-                <MdLocationPin className='text-2xl' />
-              <span className='text-lg  font-thin'>OPEN MAPS</span>
-
+                <MdLocationPin className='text-xl' />
+              <span className='text-sm font-thin '>OPEN MAPS</span>
               </div>
               <hr className=' w-1/2 mx-auto' />
 
@@ -190,15 +187,15 @@ function App() {
               className='text-2xl'
                />
               <div className='inline-flex'>
-                <FaCalendarDay className='text-2xl' />
-              <span className=' text-lg font-light text-center '>ADD TO CALENDAR</span>
+                <FaCalendarDay className='text-xl' />
+              <span className=' text-sm font-thin text-center '>ADD TO CALENDAR</span>
               </div>
               <hr className=' w-1/2 mx-auto' />
-              <span className=' text-lg font-light text-center '>LIVE STREAMING</span>
-              <span className=' text-lg font-light text-center '>We also plan to publish our wedding virtually via Youtube which you can follow via the folling link</span>
+              <span className=' text-4xl font-thin text-center parisienne-regular'>Live Streaming</span>
+              <span className=' text-sm font-thin text-center '>We also plan to publish our wedding virtually via Youtube which you can follow via the folling link</span>
               <div className='inline-flex'>
-                <FaWifi className='text-2xl' />
-              <span className=' text-lg font-light text-center '>JOIN STREAMING</span>
+                <FaWifi className='text-xl' />
+              <span className=' text-sm font-thin text-center '>JOIN STREAMING</span>
 
               </div>
               <hr className=' w-1/2 mx-auto' />
@@ -208,52 +205,62 @@ function App() {
           
           {/* RESERVATION SECTION */}
           <div className='bg-[url(/assets/background-homew.jpg)] h-screen p-4'>
-          <div className='flex flex-col gap-2 '>
-            <span>Reservation</span>
-            <span>Please kindly help us prepare everything better by confirming your attendance to our wedding event with the following RSVP form:</span>
+          <div className='flex flex-col gap-2 gap-y-5 my-10 text-[#66574c] '>
+            <span className='uppercase text-2xl'>Reservation</span>
+            <span className='text-sm font-light'>Please kindly help us prepare everything better by confirming your attendance to our wedding event with the following RSVP form:</span>
             {/* FORM SIMPLE */}
+            <form className=''>
+              <label>
+                Nama
+                <br />
+                <input type="text" name="name" className=' border-b-1' />
+              </label>
+              <br />
+              <button type='submit' className='bg-[#66574c] w-15 h-8 rounded-xl text-sm mt-5 text-[#d8cfc6]' >Kirim</button>
+            </form>
             {/* Isi nama, kehadiran yes/no, jumlah tamu */}
 
-            <span>Wedding Gift</span>
-            <span>For family and friends who would like to send a gift. We would be glad to receive it. Tap the following buttons to send them to us:</span>
+            <span className='uppercase text-2xl'>Wedding Gift</span>
+            <span className='text-sm font-light'>For family and friends who would like to send a gift. We would be glad to receive it. Tap the following buttons to send them to us:</span>
+            <button type='submit' className='bg-[#66574c] w-20 h-10 rounded-xl text-[#d8cfc6]' >Kirim</button>
             </div>
           </div>
 
-          {/* GALLERY SECTION */}
-          <div className='p-4 flex flex-col items-center gap-y-4 bg-[#d8cfc6] '>
-            <div className='flex flex-col'>
-              <span className='text-2xl font-bold'>Gallery</span>
-              <span className='text-lg font-light'>Our wedding photos will be uploaded here soon</span>
-              <div className='flex flex-2'>
-                <div className=''>
+            {/* GALLERY SECTION */}
+            <div className='p-1 flex flex-col items-center gap-y-1 bg-[#d8cfc6] text-center  '>
+              <div className='flex flex-col '>
+                <span className='text-2xl font-bold'>Gallery</span>
+                <span className='text-sm font-thin'>Our wedding photos will be uploaded here soon</span>
+                <div className='grid grid-cols-2 gap-0'>
                   {images.map((image, index) => (
-                    <img key={index} src={image.url} alt={image.alt} />
+                    <div key={index} className=''>
+                      <img src={image.url} alt={image.alt} className='object-cover size-full rounded-sm ' />
+                    </div>
                   ))}
                 </div>
+                <span className='text-[10px] italic font-thin text-center'>Photos from : @ONEPROPHOTO</span>
               </div>
-              <span className='text-lg text-center'>Photos from : @ONEPROPHOTO</span>
             </div>
-            
-          </div>
 
           {/* KOMEN BEST WISHES */}
-          <div className='p-4 flex flex-col items-center gap-y-4 bg-[#d8cfc6] '>
+          <div className='p-4 flex flex-col items-center gap-y-4 bg-[#d8cfc6] text-center py-10'>
             <div className='flex flex-col'>
               <span className='text-2xl font-bold'>Your Best Wishes</span>
-              <span className='text-lg font-light'>Kindly express your best wishes by using the form provided below. Thank you.</span>
+              <span className='text-sm font-thin'>Kindly express your best wishes by using the form provided below. Thank you.</span>
               {/* Form komentar nama, wishes, konfirmasi kehadiran */}
               {/* tampilkan komen komen dummy */}
             </div>
           </div>
 
           {/* FOOTER */}
-          <div className='p-4 flex flex-col items-center gap-y-4 bg-[#d8cfc6] '>
+          <div className='p-4 flex flex-col items-center gap-y-4 bg-[#d8cfc6] text-center'>
             <div className='flex flex-col'>
               <span className='text-2xl font-bold'>Thank You!</span>
-              <span className='text-lg font-light'>It is a pleasure and honor for us, if you are willing to attend and give us your blessing.</span>
+              <span className='text-sm font-thin mb-50'>It is a pleasure and honor for us, if you are willing to attend and give us your blessing.</span>
               <span>Made with 
                  <FontAwesomeIcon icon={faHeart} className='text-red-600' />
-                 for you</span>
+                 for you
+              </span>
             </div>
           </div>
 
