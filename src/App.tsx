@@ -4,8 +4,9 @@ import './App.css'
 import ImageSlider from './components/ImageSlider';
 import SisiKiri from './components/SisiKiri';
 import { MdLocationPin } from 'react-icons/md';
-import Countdown from 'react-countdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CountdownTimer from './components/CountdownTimer';
+import KomentarKomentar from './components/KomentarKomentar';
 
 const images = [
   {
@@ -168,37 +169,31 @@ function App() {
           <div className='relative text-center w-full h-full items-center p-5 '>
             <div className='flex flex-col gap-2 text-center items-center text-white gap-y-10'>
               <span className='text-4xl parisienne-regular'>Wedding Event</span>
-              <span className='text-2xl font-thin '>Saturday, 06
-              May 2025</span>
+              <span className='text-2xl font-thin '>Saturday, 06 May 2025</span>
               <span className=' text-sm text-center '>19.00 - 21.00 WIB</span>
               <FaMapMarkedAlt className='text-2xl' />
               <span className=' text-lg text-center uppercase'>The Papandayan Hotel</span>
               <span className='text-lg font-thin'>Jl. Gatot Subroto No.83, Malabar, Kec. Lengkong, Kota Bandung, Jawa Barat 40262</span>
-              <div className='inline-flex'>
-                <MdLocationPin className='text-xl' />
-              <span className='text-sm font-thin '>OPEN MAPS</span>
+              <div className='open-maps'>
+                <MdLocationPin className='text-xl inline-block mr-1' />
+                <a href="https://maps.app.goo.gl/5d5LVDDLkJfnTFs57"><span className='text-sm font-thin'>OPEN MAPS</span></a>
+                <hr className=' w-full mx-auto mt-2' />
               </div>
-              <hr className=' w-1/2 mx-auto' />
 
               {/* COUNTDOWN JAVASCRIPT REACT */}
-              <Countdown 
-              autoStart
-              date='2026-02-01T01:02:03'
-              className='text-2xl'
-               />
-              <div className='inline-flex'>
-                <FaCalendarDay className='text-xl' />
-              <span className=' text-sm font-thin text-center '>ADD TO CALENDAR</span>
+              <CountdownTimer targetDate={'2025-05-01T01:02:03'} />
+              <div className='add-calendar'>
+                <FaCalendarDay className='text-xl inline-block mr-1' />
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan%20Putri%20dan%20Putra&details=Pernikahan%20Putri%20dan%20Putra&dates=20240225T190000/20240225T210000&location=https://maps.app.goo.gl/ewSVHL1FSaHqyEue7"><span className=' text-sm font-thin text-center '>ADD TO CALENDAR</span></a>
+                <hr className=' w-full mx-auto mt-2' />
               </div>
-              <hr className=' w-1/2 mx-auto' />
               <span className=' text-4xl font-thin text-center parisienne-regular'>Live Streaming</span>
               <span className=' text-sm font-thin text-center '>We also plan to publish our wedding virtually via Youtube which you can follow via the folling link</span>
-              <div className='inline-flex'>
-                <FaWifi className='text-xl' />
-              <span className=' text-sm font-thin text-center '>JOIN STREAMING</span>
-
+              <div className='join-streaming'>
+                <FaWifi className='text-xl inline-block mr-2' />
+                <a href="https://www.youtube.com/@goweddingofficial9404/videos"><span className=' text-sm font-thin text-center '>JOIN STREAMING</span></a>
+                <hr className=' w-full mx-auto mt-2' />
               </div>
-              <hr className=' w-1/2 mx-auto' />
             </div>
           </div>
           </div>
@@ -209,20 +204,35 @@ function App() {
             <span className='uppercase text-2xl'>Reservation</span>
             <span className='text-sm font-light'>Please kindly help us prepare everything better by confirming your attendance to our wedding event with the following RSVP form:</span>
             {/* FORM SIMPLE */}
-            <form className=''>
+            <div className='flex'>
+            <form className='inline-block'>
               <label>
                 Nama
                 <br />
-                <input type="text" name="name" className=' border-b-1' />
+                <input type="text" name="name" className=' border-b-1 w-full' />
+              </label>
+              <label>
+                Will You Attend ?
+                <br />
+                <input type="checkbox" name="name" className=' border-b-1 w-full' />
+              </label>
+              <label>
+                No. of Guest
+                <br />
+                <input type="number" name="name" className=' border-b-1 w-full' />
               </label>
               <br />
-              <button type='submit' className='bg-[#66574c] w-15 h-8 rounded-xl text-sm mt-5 text-[#d8cfc6]' >Kirim</button>
+              <button type='submit' className='bg-[#66574c] w-15 h-8 text-sm mt-5 text-[#d8cfc6]' >Kirim</button>
             </form>
+            </div>
             {/* Isi nama, kehadiran yes/no, jumlah tamu */}
-
-            <span className='uppercase text-2xl'>Wedding Gift</span>
-            <span className='text-sm font-light'>For family and friends who would like to send a gift. We would be glad to receive it. Tap the following buttons to send them to us:</span>
-            <button type='submit' className='bg-[#66574c] w-20 h-10 rounded-xl text-[#d8cfc6]' >Kirim</button>
+            <div className=' flex'>
+              <div className='grid  gap-y-5'>
+                <span className='uppercase text-2xl'>Wedding Gift</span>
+                <span className='text-sm font-light'>For family and friends who would like to send a gift. We would be glad to receive it. Tap the following buttons to send them to us:</span>
+                <button type='submit' className='bg-[#66574c] w-fit h-10 p-2 text-[#d8cfc6]' >Wedding Gift</button>
+              </div>
+            </div>
             </div>
           </div>
 
@@ -247,13 +257,14 @@ function App() {
             <div className='flex flex-col'>
               <span className='text-2xl font-bold'>Your Best Wishes</span>
               <span className='text-sm font-thin'>Kindly express your best wishes by using the form provided below. Thank you.</span>
+              <KomentarKomentar />
               {/* Form komentar nama, wishes, konfirmasi kehadiran */}
               {/* tampilkan komen komen dummy */}
             </div>
           </div>
 
           {/* FOOTER */}
-          <div className='p-4 flex flex-col items-center gap-y-4 bg-[#d8cfc6] text-center'>
+          <div className='p-4 flex flex-col items-center gap-y-4 bg-[#d8cfc6] text-center pb-20'>
             <div className='flex flex-col'>
               <span className='text-2xl font-bold'>Thank You!</span>
               <span className='text-sm font-thin mb-50'>It is a pleasure and honor for us, if you are willing to attend and give us your blessing.</span>
